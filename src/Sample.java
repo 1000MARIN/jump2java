@@ -2,11 +2,9 @@ import java.util.Locale;
 
 public class Sample {
     public static void main(String[] args) {
-        StringBuffer sb = new StringBuffer();
-        sb.append("hello");
-        sb.append(" ");
-        sb.append("jump to java");
-        String result = sb.toString();
-        System.out.println(result);
+        StringBuilder sb = new StringBuilder();
+        sb.append("hello jump to java");
+        System.out.println(sb.substring(0, 4));
+
     }
 }
