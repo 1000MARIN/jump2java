@@ -1,12 +1,14 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashMap;
 
 public class Sample {
     public static void main(String[] args) {
+        HashMap<String, String> map = new HashMap<>();
+        map.put("people", "사람");
+        map.put("baseball", "야구");
 
-        ArrayList<String> pitches = new ArrayList<>(Arrays.asList("123", "153", "139"));
-        pitches.sort(Comparator.naturalOrder());    // 오름차순으로 정렬
-        System.out.println(pitches);                // 123,153,123 출력
+        System.out.println(map.getOrDefault("java", "자바"));
     }
 }
