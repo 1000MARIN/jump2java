@@ -2,9 +2,10 @@ import java.util.Locale;
 
 public class Sample {
     public static void main(String[] args) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("hello jump to java");
-        System.out.println(sb.substring(0, 4));
+        String[] weeks = {"월", "화", "수", "목", "금", "토", "일"};
 
+        for (String week : weeks) {
+            System.out.println(week);
+        }
     }
 }
