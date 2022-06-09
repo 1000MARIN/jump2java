@@ -8,7 +8,8 @@ public class Sample {
         HashMap<String, String> map = new HashMap<>();
         map.put("people", "사람");
         map.put("baseball", "야구");
+        System.out.println(map.keySet());
 
-        System.out.println(map.getOrDefault("java", "자바"));
+
     }
 }
