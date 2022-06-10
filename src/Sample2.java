@@ -3,13 +3,12 @@ import java.util.Arrays;
 
 public class Sample2 {
     public static void main(String[] args) {
-        int a = 0;
-        while (a < 10) {
-            a++;
-            if (a % 2 == 0) {
-                continue;   // 짝수인 경우 조건문으로 돌아간다.
+        for (int i = 2; i < 10; i++) {
+            for (int j = 1; j < 10; j++) {
+                System.out.println(i * j + " ");
             }
-            System.out.println(a);  // 홀수만 출력된다.
+            System.out.println("");
         }
     }
 }
+
