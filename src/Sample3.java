@@ -1,33 +1,21 @@
-class Calculator {
-    int result = 0;
+class Animal {
+    String name;
 
-    int add(int num) {
-        result += num;
-        return result;
-    }
-
-    int sub(int num) {
-        result -= num;
-        return result;
+    public void setName(String name) {
+        this.name = name;
     }
 }
 
-
 public class Sample3 {
     public static void main(String[] args) {
+        Animal cat = new Animal();
+        cat.setName("baby");
 
-        Calculator cal1 = new Calculator();
-        Calculator cal2 = new Calculator();
+        Animal dog = new Animal();
+        dog.setName("happy");
 
-        System.out.println(cal1.add(3));
-        System.out.println(cal1.add(4));
-
-        System.out.println(cal2.add(3));;
-        System.out.println(cal2.add(7));;
-
-        System.out.println(cal2.sub(5));
-        System.out.println(cal2.sub(2));
-
+        System.out.println(cat.name);
+        System.out.println(dog.name);
 
     }
 }
