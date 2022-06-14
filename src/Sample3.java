@@ -1,21 +1,12 @@
-class Animal {
-    String name;
-
-    public void setName(String name) {
-        this.name = name;
-    }
-}
-
 public class Sample3 {
+    int a;  // 객체변수 a
+    void varTest(Sample3 sample3) {
+        sample3.a++;
+    }
     public static void main(String[] args) {
-        Animal cat = new Animal();
-        cat.setName("baby");
-
-        Animal dog = new Animal();
-        dog.setName("happy");
-
-        System.out.println(cat.name);
-        System.out.println(dog.name);
-
+        Sample3 sample3 = new Sample3();
+        sample3.a = 1;
+        sample3.varTest(sample3);
+        System.out.println(sample3.a);
     }
 }
