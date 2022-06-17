@@ -1,12 +1,14 @@
 public class Sample3 {
-    int a;  // 객체변수 a
-    void varTest(Sample3 sample3) {
-        sample3.a++;
+    int sum(int a, int b) {
+        return a+b;
     }
     public static void main(String[] args) {
+        int a = 3;
+        int b = 4;
+
         Sample3 sample3 = new Sample3();
-        sample3.a = 1;
-        sample3.varTest(sample3);
-        System.out.println(sample3.a);
+        int c = sample3.sum(a, b);
+
+        System.out.println(c);
     }
 }
