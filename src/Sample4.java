@@ -1,3 +1,26 @@
+interface Predator {
+    String getFood();
+
+    default void printFood() {
+        System.out.printf("my food is %s\n", getFood());
+
+    }
+
+    int LEG_COUNT = 4;  // 인터페이스 상수
+
+    static int speed() {
+        return LEG_COUNT * 30;
+    }
+}
+
+interface Barkable {
+    void bark();
+}
+
+interface BarkablePredator extends Predator, Barkable {
+
+}
+
 class Animal {
     String name;
 
@@ -6,17 +29,47 @@ class Animal {
     }
 }
 
-class Dog extends Animal {
-    void sleep() {
-        System.out.println(this.name+" zzz");
+class Tiger extends Animal implements Predator, Barkable{
+    public String getFood() {
+        return "apple";
+    }
+
+    public void bark() {
+        System.out.println("어흥");
+    }
+}
+
+class Lion extends Animal implements Barkable{
+    public String getFood() {
+        return "banana";
+    }
+
+    public void bark() {
+        System.out.println("으르렁");
+    }
+}
+
+class ZooKeeper {
+    void feed(Predator predator) {    //육식 동물이 오면 사과를 전져 준다.
+        System.out.println("feed " + predator.getFood());
+    }
+
+}
+
+class Bouncer {
+    void barkAnimal (Barkable animal) {
+        animal.bark();
     }
 }
 public class Sample4 {
     public static void main(String[] args) {
-        Dog dog = new Dog();
-        dog.setName("puppy");
-        System.out.println(dog.name);   // puppy 출력
-        dog.sleep();
+        Tiger tiger = new Tiger();
+        Lion lion = new Lion();
+
+        Bouncer bouncer = new Bouncer();
+        bouncer.barkAnimal(tiger);
+        bouncer.barkAnimal(lion);
+
     }
 
 }
