@@ -33,19 +33,13 @@ class Calculator {
     }
 }
 
-
 public class Sp5_1 {
     public static void main(String[] args) {
 
-        Calculator cal = new Calculator();
-
-        int[] data1 = {1, 3, 5, 7, 9};
-        int result1 = cal.avg(data1);
-        System.out.println(result1);    // 5 출력
-
-        ArrayList<Integer> data2 = new ArrayList<>(Arrays.asList(1, 3, 5, 7, 9));
-        int result2 = cal.avg(data2);
-        System.out.println(result2);
+        ArrayList<Integer> a = new ArrayList<>(Arrays.asList(1, 2, 3));
+        ArrayList<Integer> b = a;
+        a.add(4);
+        System.out.println(b.size());
 
 
     }
