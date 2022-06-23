@@ -40,7 +40,7 @@ public class Sp5_1 {
         ArrayList<Integer> a = new ArrayList<>(Arrays.asList(1, 2, 3));
         ArrayList<Integer> b = a;
         a.add(4);
-        System.out.println(a == b);
+
 
 
     }
