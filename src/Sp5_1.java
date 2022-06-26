@@ -1,47 +1,21 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-
 class Calculator {
-    int value;
+    Integer value;
 
     Calculator() {
         this.value = 0;
     }
-
     void add(int val) {
         this.value += val;
     }
 
-    int getValue() {
+    public Integer getValue() {
         return this.value;
     }
-
-    int avg(int[] data) {
-        int total = 0;
-        for (int num : data) {
-            total += num;
-        }
-
-        return total / data.length;
-    }
-
-    int avg(ArrayList<Integer> data) {
-        int total = 0;
-        for (int num : data) {
-            total += num;
-        }
-        return total / data.size();
-    }
 }
-
 public class Sp5_1 {
     public static void main(String[] args) {
-
-        ArrayList<Integer> a = new ArrayList<>(Arrays.asList(1, 2, 3));
-        ArrayList<Integer> b = a;
-        a.add(4);
-
-
-
+        Calculator cal = new Calculator();
+        cal.add(8);     // 여기서 NullPointerException 이 발생한다.
+        System.out.println(cal.getValue());
     }
 }
