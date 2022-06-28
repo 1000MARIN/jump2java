@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Sp7 extends Thread {
+public class Sp7 implements Runnable {
     int seq;
 
     public Sp7(int seq) {
@@ -21,7 +21,7 @@ public class Sp7 extends Thread {
     public static void main(String[] args) {
         ArrayList<Thread> threads = new ArrayList<>();
         for (int i = 0; i < 10; i++) {      // 총 10개의 쓰레드를 생상하여 실행한다.
-            Thread t = new Sp7(i);
+            Thread t = new Thread(new Sp7(i));
             t.start();
             threads.add(t);
         }
