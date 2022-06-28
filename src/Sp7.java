@@ -1,39 +1,16 @@
-import java.util.ArrayList;
+interface Calculator {
+    int sum(int a, int b);
+}
 
-public class Sp7 implements Runnable {
-    int seq;
-
-    public Sp7(int seq) {
-        this.seq = seq;
+class MyCalculator implements Calculator {
+    public int sum(int a, int b) {
+        return a + b;
     }
-
-    public void run() {
-        System.out.println(this.seq + " thread start.");     // 쓰레드 시작
-
-        try {
-            Thread.sleep(1000);                        // 1초 대기한다.
-
-        } catch (Exception e) {
-        }
-        System.out.println(this.seq + " thread end.");        // 쓰레드 종료
-    }
-
+}
+public class Sp7  {
     public static void main(String[] args) {
-        ArrayList<Thread> threads = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {      // 총 10개의 쓰레드를 생상하여 실행한다.
-            Thread t = new Thread(new Sp7(i));
-            t.start();
-            threads.add(t);
-        }
-
-        for (int i = 0; i < threads.size(); i++) {
-            Thread t = threads.get(i);
-            try {
-                t.join();
-            } catch (Exception e) {
-
-            }
-        }
-        System.out.println("main end.");    // main 메소드 종료
+        Calculator mc = (int a, int b) -> a + b;
+        int result = mc.sum(3, 4);
+        System.out.println(result);     // 7 출력
     }
 }
