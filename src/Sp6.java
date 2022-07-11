@@ -16,6 +16,8 @@ public class Sp6 {
         }
         br.close();
 
+        String boy = "boy";
+
         // 줄 단위로 읽으면 줄바꿈 문자가 없어지므로 줄바꿈 문자를 포함한다.
         String text = String.join("\n", data);
 
