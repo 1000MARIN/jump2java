@@ -26,5 +26,6 @@ public class Sp9_9 {
         Cal cal2 = new Cal(data2);
         System.out.println(cal2.sum());     // 40 출력
         System.out.println(cal2.avg());     // 8.0 출력
+
     }
 }
