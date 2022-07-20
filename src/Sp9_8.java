@@ -29,6 +29,7 @@ public class Sp9_8 {
         BufferedReader br = new BufferedReader(new FileReader("C:/Users/snc/IdeaProjects/jump2java/test.txt"));
         while (true) {
             String line = br.readLine();
+
             if (line == null) break;
             lines.add(line);
         }
